@@ -2,10 +2,10 @@ import React from 'react'
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className='bg-gray-500 h-screen p-2 flex flex-col justify-between'>
         {/* LOGO */}
       <div>360Cario</div>
-
+      
       {/* NAVIGATION BAR */}
       <nav>
         <ui>
