@@ -56,14 +56,13 @@ const Sidebar = () => {
   }}
   style={{ backgroundColor: isActive ? item.bgColor : "transparent" }}
   className={`flex items-center gap-3 rounded-xl transition-all duration-300
-    ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"}
-    ${isActive ? "font-semibold text-gray-900" : "text-gray-600 hover:bg-[#d9e4f2]"}
-  `}>
+    ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"} `}>
+{/* icon */}
   <Icon
     size={22}
-    className="min-w-[22px] transition-colors"
     style={{ color: isActive ? item.color : "#6b7280" }}
   />
+  
 
   {/* Smooth animated text */}
   <span
