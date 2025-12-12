@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { House, Users, Mail, Send, ChartColumn, LogIn } from 'lucide-react';
 
 const navItems = [
@@ -11,53 +11,78 @@ const navItems = [
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState("dashboard");
+  const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef(null);
+
+  // close on clicking outside
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className='bg-[#f1f5fa] h-screen flex flex-col justify-between fixed p-4 w-60 rounded-tr-3xl rounded-br-3xl'>
-
+    <div
+      ref={sidebarRef}
+      className={`h-screen bg-[#f1f5fa] fixed p-4 transition-all duration-300 rounded-tr-3xl rounded-br-3xl
+        ${isOpen ? "w-60" : "w-20"}
+      `}
+    >
+      
       {/* Logo */}
-      <div className='flex flex-col gap-3'>
-        <div className="logo flex items-center gap-2 m-4">
-          <div className='bg-[#202c40] rounded-2xl p-2 text-white'><Mail /></div>
-          <h1 className='text-2xl font-bold'>360ario</h1>
+      <div className="flex items-center gap-2 m-4 cursor-pointer">
+        <div className='bg-[#202c40] rounded-2xl p-2 text-white'>
+          <Mail />
         </div>
-
-        {/* Dynamic Nav */}
-        <nav className="flex flex-col gap-3">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeItem === item.id;
-
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveItem(item.id)}
-                style={{
-                  background: isActive ? item.bgColor : "transparent"
-                }}
-                className={`flex items-center gap-3 px-6 py-2 rounded-2xl transition-all
-                  ${isActive ? "font-semibold text-gray-800" : "text-gray-600 hover:bg-[#d9e4f2]"}
-                `}
-              >
-                <Icon
-                  size={20}
-                  className="transition-colors"
-                  style={{ color: isActive ? item.color : "#6b7280" }}
-                />
-                {item.label}
-              </button>
-            );
-          })}
-        </nav>
+        {isOpen && <h1 className='text-2xl font-bold'>360ario</h1>}
       </div>
 
-      {/* Login Icon */}
-      <div className="login-icon flex mt-8 p-2 ml-5 text-gray-600 hover:bg-[#ceddf1] cursor-pointer rounded-xl">
-        <LogIn />
-      </div>
+      {/* Nav Items */}
+      <nav className="flex flex-col gap-3">
+        {navItems.map((item) => {
+          const Icon = item.icon;
+          const isActive = activeItem === item.id;
 
+          return (
+            <button
+  key={item.id}
+  onClick={() => {
+    setActiveItem(item.id);
+    setIsOpen(true);
+  }}
+  style={{ backgroundColor: isActive ? item.bgColor : "transparent" }}
+  className={`flex items-center gap-3 rounded-xl transition-all duration-300
+    ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"}
+    ${isActive ? "font-semibold text-gray-900" : "text-gray-600 hover:bg-[#d9e4f2]"}
+  `}
+>
+  <Icon
+    size={22}
+    className="min-w-[22px] transition-colors"
+    style={{ color: isActive ? item.color : "#6b7280" }}
+  />
+
+  {/* Smooth animated text */}
+  <span
+    className={`
+      overflow-hidden whitespace-nowrap transition-all duration-300
+      ${isOpen ? "opacity-100 translate-x-0 ml-2" : "opacity-0 -translate-x-5 w-0"}
+    `}
+  >
+    {item.label}
+  </span>
+</button>
+
+          );
+        })}
+      </nav>
     </div>
   );
 };
+
 
 export default Sidebar;
