@@ -34,7 +34,7 @@ const Sidebar = () => {
     >
       
       {/* Logo */}
-      <div className="flex items-center gap-2 m-4 cursor-pointer">
+      <div className="flex items-center justify-center gap-2 m-4 cursor-pointer">
         <div className='bg-[#202c40] rounded-2xl p-2 text-white'>
           <Mail />
         </div>
@@ -42,7 +42,7 @@ const Sidebar = () => {
       </div>
 
       {/* Nav Items */}
-      <nav className="flex flex-col gap-3">
+      <nav className="flex flex-col gap-6 mt-6">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeItem === item.id;
@@ -58,8 +58,7 @@ const Sidebar = () => {
   className={`flex items-center gap-3 rounded-xl transition-all duration-300
     ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"}
     ${isActive ? "font-semibold text-gray-900" : "text-gray-600 hover:bg-[#d9e4f2]"}
-  `}
->
+  `}>
   <Icon
     size={22}
     className="min-w-[22px] transition-colors"
@@ -80,6 +79,25 @@ const Sidebar = () => {
           );
         })}
       </nav>
+
+      <div
+  className={`absolute bottom-6 left-0 right-0 flex ${isOpen ? "justify-start pl-6" : "justify-center"}`}
+>
+  <button
+    onClick={() => setIsOpen(true)}
+    className={`flex items-center gap-3 text-gray-600 hover:bg-[#e6eef9] rounded-xl transition-all
+      ${isOpen ? "px-4 py-2" : "p-2"}
+    `}
+  >
+    <LogIn size={22} className="min-w-[22px]" />
+
+    {isOpen && (
+      <span className="opacity-100 transition-all">Login</span>
+    )}
+  </button>
+</div>
+
+      
     </div>
   );
 };
