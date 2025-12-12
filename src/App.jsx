@@ -1,9 +1,12 @@
 import React from 'react'
 import './index.css'
+import Sidebar from './components/layout/Sidebar'
 
 const App = () => {
   return (
-    <div className='bg-red-500'>App</div>
+    <>
+    <Sidebar/>
+    </>
   )
 }
 
