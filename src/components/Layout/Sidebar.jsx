@@ -28,7 +28,7 @@ const Sidebar = () => {
   return (
     <div
       ref={sidebarRef}
-      className={`h-screen bg-[#f1f5fa] fixed p-4 transition-all duration-300 rounded-tr-3xl rounded-br-3xl
+      className={`h-screen bg-[#f5f7fa] shadow-2xl fixed p-4 transition-all duration-300 rounded-tr-3xl rounded-br-3xl
         ${isOpen ? "w-60" : "w-20"}
       `}
     >
