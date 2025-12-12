@@ -5,10 +5,10 @@ const DashBoard = () => {
   return (
     <div>
         <Sidebar/>
-        <div className='ml-20'>
+        <div className='ml-20 flex justify-around items-center'>
             {/* Dashboard Content */}
-            <div className='p-6'>
-                <h1 className='text-3xl font-bold p-6'>Dashboard Overview</h1>
+            <div className='bg-gray-400'>
+                <h1 className='text-3xl font-bold p-2'>Dashboard Overview</h1>
             <p>Welcome back, ravi!
                 <span>All System Operationals</span>
             </p>
@@ -20,6 +20,8 @@ const DashBoard = () => {
                 <div>Subscriber</div>
                 <div>Open Rating</div>
             </div>
+
+            {/* Performance Overview */}
         </div>
     </div>
   )
