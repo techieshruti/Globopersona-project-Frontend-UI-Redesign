@@ -54,15 +54,20 @@ const Sidebar = () => {
     setActiveItem(item.id);
     setIsOpen(true);
   }}
-  style={{ backgroundColor: isActive ? item.bgColor : "transparent" }}
+  style={{ backgroundColor: isActive ? item.bgColor : "transparent",
+    borderColor: isActive ? item.color : "transparent",
+   }}
   className={`flex items-center gap-3 rounded-xl transition-all duration-300
-    ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"} `}>
-{/* icon */}
+    ${isOpen ? "px-4 py-2 justify-start" : "p-2 justify-center"}
+    ${isActive ? "font-semibold text-gray-900" : "text-gray-600 hover:bg-[#d9e4f2]"}
+    ${!isOpen && isActive ? "border-l-4" : "border-l-0"}
+  `}>
+    
   <Icon
     size={22}
+    className="min-w-[22px] transition-colors"
     style={{ color: isActive ? item.color : "#6b7280" }}
   />
-  
 
   {/* Smooth animated text */}
   <span
