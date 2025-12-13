@@ -22,6 +22,13 @@ const DashBoard = () => {
             </div>
 
             {/* Performance Overview */}
+            <div>
+                <Bell />
+                <Search />
+            </div>
+
+            {/* admin login */}
+            
         </div>
     </div>
   )
