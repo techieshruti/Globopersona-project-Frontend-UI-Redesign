@@ -6,52 +6,61 @@ const DashBoard = () => {
   return (
     <div>
         <Sidebar/>
-        <div className='ml-20 pl-8 h-20 bg-amber-200 flex justify-between items-center'>
+        <div className='ml-20 pl-8 flex py-6 justify-between items-center'>
             {/* Dashboard Content */}
             <div>
                 <h1 className='text-3xl font-bold '>Dashboard Overview</h1>
             <div className='flex flex-auto'>
                 <p className='text-gray-600 text-sm flex items-center font-semibold'>Welcome back, Ravi!
-                <Dot size={50}
-                className='text-green-600'
-                />
+                <span className="w-2 h-2 bg-green-600 rounded-full mx-2"></span>
+
                     <span className=' text-green-600'>All System Operationals</span>
             </p>
             </div>
             </div>
 
             {/* Top Right Icons */}
-            <div className='flex gap-20 items-center '>
+            <div className='flex gap-16 items-center '>
                 {/* matrics */}
             <div className='flex gap-6 text-gray-600 semibold text-lg bg-[#f2f6fc] py-2 px-6 rounded-2xl'>
                 <div className='border-gray-200 border-r-2 pr-4 flex-col justify-center items-center'>
-                    <p className='text-black font-semibold'>47</p>
+                    <p className='text-black font-bold'>47</p>
                     <p>Compaign</p>
                 </div>
                 <div className='border-gray-200 flex-col justify-center items-center border-r-2 pr-4'>
-                    <p className='text-black font-semibold'>12.8k</p>
+                    <p className='text-black font-bold'>12.8k</p>
                     <p>Subscriber</p>
                 </div>
-                <div className='text-green-600'>
-                    <p className='font-semibold'>28.4%</p>
+                <div className='text-[#22823f]'>
+                    <p className='font-bold'>28.4%</p>
                     <p>Open Rating</p>
                 </div>
             </div>
 
             {/* Performance Overview */}
-            <div className='flex items-center justify-center gap-6 relative'>
+            <div className='flex items-center justify-center gap-6'>
+                <div className='relative'>
                 {/* Notification */}
                 <Bell /> 
                 <span 
                 className='absolute w-5 h-5 bg-red-600 -top-5 -right-4 rounded-full text-white flex items-center justify-center text-xs font-semibold'>
                     3
                     </span>
-                {/* <Search /> */}
+                           </div>
+                           <Search />
+ 
             </div>
 
             {/* admin login */}
-            <div className='flex items-center gap-2 p-2 rounded-lg bg-green-200 mr-4'>
-                <h1 className='px-4 py-2 bg-[#2563eb] rounded-xl text-white font-semibold'>R</h1>
+            <div className='flex items-center gap-2 p-2 rounded-lg mr-4'>
+                
+                
+                <div className='relative'>
+                    <h1 className='px-4 py-2 bg-[#2563eb] rounded-xl text-white font-semibold'>R</h1>
+                    <span className='absolute w-3 h-3 bg-green-600 border-t-2 border-l-2 -bottom-1 -right-1 rounded-full text-white flex items-center justify-center text-xs font-semibold'></span>
+                </div>
+
+
                 <div className='text-sm'>
                     <h2 className='font-semibold'>Ravi</h2>
                 <p className='text-gray-500'>Admin</p>
