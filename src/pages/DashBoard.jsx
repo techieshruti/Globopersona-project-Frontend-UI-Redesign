@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../components/layout/Sidebar";
+import Sidebar from "../components/layout/Sidebar.jsx";
 import { Bell, Search, ChevronDown } from "lucide-react";
 import PerformanceOverview from "../components/Dashboard/PerformanceOverview";
 

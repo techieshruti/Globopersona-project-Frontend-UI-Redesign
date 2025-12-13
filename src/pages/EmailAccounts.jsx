@@ -1,4 +1,4 @@
-import Sidebar from "../components/layout/Sidebar";
+import Sidebar from "../components/layout/Sidebar.jsx";
 import EmailAccountsHeader from "../components/emailAccounts/EmailAccountsHeader";
 import EmailHeaderCards from "../components/Email List/EmailHeaderCards";
 import EmailAccountRow from "../components/emailAccounts/EmailAccountsRow";
