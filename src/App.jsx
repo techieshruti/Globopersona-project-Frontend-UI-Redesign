@@ -9,7 +9,7 @@ const App = () => {
     <>
     {/* <DashBoard/> */}
     {/* <EmailList/> */}
-    <EmailAccounts/>
+    {/* <EmailAccounts/> */}
     </>
   )
 }
