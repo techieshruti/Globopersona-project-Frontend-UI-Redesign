@@ -5,8 +5,10 @@ import Sidebar from '../layout/Sidebar'
 const EmailList = () => {
   return (
     <div>
-        <Sidebar/>
+      <Sidebar/>
+      <div className='bg-[#f2f6fc] ml-20'>
         <EmailHeader/>
+     </div>
     </div>
   )
 }

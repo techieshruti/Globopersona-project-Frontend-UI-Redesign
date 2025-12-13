@@ -2,9 +2,9 @@ import React from 'react'
 
 const EmailHeader = () => {
   return (
-    <div className='bg-[#f2f6fc] ml-20'>
+    <div className='p-4 flex justify-between items-center border-b-2 border-gray-200'>
         {/*Left */}
-        <div>
+        <div className='flex gap-4 items-center'>
             <h1>icon</h1>
             <div>
                 <h1>Email List</h1>
@@ -12,8 +12,8 @@ const EmailHeader = () => {
             </div>
         </div>
         {/* Right */}
-        <div>
-            <div>
+        <div className='flex gap-4 items-center'> 
+            <div className='flex gap-2 items-center border-2 border-gray-300 px-3 py-1 rounded-lg'>
                 <h1>icon</h1>
                 <h1>Refresh</h1>
             </div>
