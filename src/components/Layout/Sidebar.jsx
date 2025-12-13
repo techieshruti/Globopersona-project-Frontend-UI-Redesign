@@ -49,15 +49,16 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef(null);
 
-  // Close sidebar on outside click
+  // ✅ FIX: use CLICK instead of MOUSEDOWN
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
         setIsOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   return (
@@ -87,7 +88,7 @@ const Sidebar = () => {
             <NavLink
               key={item.id}
               to={item.path}
-              onClick={(e) => {e.stopPropagation(); setIsOpen(true)}}
+              onClick={() => setIsOpen(true)}
               className={({ isActive }) =>
                 `flex items-center rounded-xl transition-all duration-300
                 ${isOpen ? "px-4 py-2 gap-3" : "p-2 justify-center"}
@@ -95,22 +96,24 @@ const Sidebar = () => {
               }
               style={({ isActive }) => ({
                 backgroundColor: isActive ? item.bgColor : "transparent",
-                borderLeft: !isOpen && isActive ? `4px solid ${item.color}` : "none",
+                borderLeft: !isOpen && isActive
+                  ? `4px solid ${item.color}`
+                  : "none",
               })}
             >
               <Icon
                 size={22}
                 className="min-w-[22px]"
-                style={{
-                  color: "inherit",
-                }}
+                style={{ color: item.color }}
               />
 
               <span
                 className={`transition-all duration-300 whitespace-nowrap
-                ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5 w-0"}
-              `}
-                style={{ color: "inherit" }}
+                  ${
+                    isOpen
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 -translate-x-5 w-0"
+                  }`}
               >
                 {item.label}
               </span>
