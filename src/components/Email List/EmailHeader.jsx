@@ -1,5 +1,5 @@
 import React from 'react'
-import { Database } from 'lucide-react'
+import { Database,RefreshCcw, Upload } from 'lucide-react'
 
 const EmailHeader = () => {
   return (
@@ -17,13 +17,17 @@ const EmailHeader = () => {
         </div>
         {/* Right */}
         <div className='flex gap-4 items-center'> 
-            <div className='flex gap-2 items-center border-2 border-gray-300 px-3 py-1 rounded-lg'>
-                <h1>icon</h1>
+            <div className='flex gap-2 items-center border-2 border-gray-300 text-gray-600 bg-white font-semibold px-3 py-1 rounded-lg'>
+                <RefreshCcw size={18} />
                 <h1>Refresh</h1>
             </div>
-            <button>
-                <span>icon</span>
-                Upload Email List</button>
+            <button className='bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white px-4 py-2 rounded-lg'
+            >
+            <div className='flex gap-2 items-center'>
+                <Upload size={18}/>
+                Upload Email List
+            </div>
+            </button>
         </div>
     </div>
   )

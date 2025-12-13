@@ -1,6 +1,6 @@
 import React from 'react'
 import DashboardMetricCard from './DashboardMetricCard';
-import { Rocket, ArrowUpRight, UsersRound, Eye,Shell, TrendingDown, DollarSign, RefreshCcw, Target} from "lucide-react";
+import { Rocket,UsersRound, Eye, TrendingDown, DollarSign, RefreshCcw, Target} from "lucide-react";
 
 const metrics = [
   {
