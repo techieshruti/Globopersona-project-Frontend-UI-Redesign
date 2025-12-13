@@ -1,7 +1,7 @@
-import { Grid, List, SlidersHorizontal } from "lucide-react";
+import { Grid, List, SlidersHorizontal, TriangleAlert } from "lucide-react";
 import React from "react";
 
-const EmailLayoutCards = () => {
+const EmailLayoutCards = ({status, connection, title,subtitle, buttons,validity}) => {
   return (
     <div>
       {/* filter */}
@@ -44,25 +44,29 @@ const EmailLayoutCards = () => {
       </div>
 
       {/* Email List UI card */}
-      <div>
+      <div className="mt-4 ml-4 bg-red-300 p-4">
         {/* top section */}
-        <div>
-          <p>active</p>
-          <p>icon and poor</p>
+        <div className="flex gap-4 items-center text-sm">
+          <p className="px-4 py-0.5 bg-green-100 rounded-xl">{status}</p>
+          <div className="px-2 py-0.5 bg-red-100 flex justify-center items-center gap-1 rounded-xl">
+            <TriangleAlert size={18}/>
+            {connection}</div>
         </div>
 
         {/* body */}
-        <h1>Final Test</h1>
-        <span>subtitle</span>
+        <div className="pt-4 pb-4">
+          <h1 className="text-xl font-bold text-gray-800">{title}</h1>
+        <span className="text-gray-500">{subtitle}</span>
+        </div>
 
         {/* button */}
         <div>
-          <button>1st</button>
-          <button>2nd</button>
+          <button className="bg-blue-50 px-10 py-4 rounded-lg text-xl font-bold mr-2">{buttons[0]}</button>
+          <button className="bg-blue-50 px-10 py-4 rounded-lg text-xl font-bold ml-2">{buttons[1]}</button>
         </div>
 
         {/* footer */}
-        <button>valid</button>
+        <button>{validity}</button>
       </div>
     </div>
   );

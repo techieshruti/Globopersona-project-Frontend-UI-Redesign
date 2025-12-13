@@ -5,7 +5,7 @@ import EmailHeaderCards from './EmailHeaderCards'
 import { Database, Mail, Star, Target, TrendingUp, Users } from 'lucide-react'
 import EmailLayoutCards from './EmailLayoutCards'
 
-const cardData=[
+const headerCardData=[
   {
     title: "Total lists",
     value: "7",
@@ -69,18 +69,37 @@ const cardData=[
 
 ]
 
+const cardData=[
+  {
+    status: "active",
+    connection: "poor",
+    title: "Final Test",
+    subtitle: "This is a final test list",
+    buttons: ["1st", "2nd"],
+    validity: "valid",   
+  },
+]
+
 const EmailList = () => {
   return (
     <div>
       <Sidebar/>
       <div className='bg-[#f5f7f9] ml-20'>
         <EmailHeader/>
+
+        {/* Email Header Card */}
         <div className="grid grid-cols-6 gap-4 mt-6 px-6">
-        {cardData.map((item) => (
+        {headerCardData.map((item) => (
           <EmailHeaderCards key={item.title} {...item} />
         ))}
       </div>
-      <EmailLayoutCards/>
+
+      {/* Email List UI Card */}
+      <div className='grid grid-col-3 gap-4'>
+        {cardData.map((item) => (
+          <EmailLayoutCards key={item.title} {...item} />
+        ))}
+      </div>
      </div>
     </div>
   )
