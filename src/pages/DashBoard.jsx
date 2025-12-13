@@ -1,7 +1,7 @@
 import React from "react";
-import Sidebar from "../layout/Sidebar";
+import Sidebar from "../components/layout/Sidebar";
 import { Bell, Search, ChevronDown } from "lucide-react";
-import PerformanceOverview from "./PerformanceOverview";
+import PerformanceOverview from "../components/Dashboard/PerformanceOverview";
 
 const metrics = [
   { value: "47", label: "Campaign" },

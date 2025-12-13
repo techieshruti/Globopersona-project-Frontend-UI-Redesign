@@ -1,14 +1,15 @@
 import React from 'react'
 import './index.css'
-import DashBoard from './components/Dashboard/DashBoard'
-import EmailHeader from './components/Email List/EmailHeader'
-import EmailList from './components/Email List/EmailList'
+import DashBoard from './pages/DashBoard'
+import EmailList from './pages/EmailList'
+import EmailAccounts from './pages/EmailAccounts'
 
 const App = () => {
   return (
     <>
     {/* <DashBoard/> */}
-    <EmailList/>
+    {/* <EmailList/> */}
+    <EmailAccounts/>
     </>
   )
 }
