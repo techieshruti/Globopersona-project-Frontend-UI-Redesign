@@ -33,6 +33,16 @@ const metrics = [
     bgColor: "bg-green-50",
     barColor: "bg-green-600",
   },
+  {
+    title: "Avg Click Rate",
+    value: "4.7%",
+    subtitle: "Engagement metric",
+    progress: 78,
+    trend: "-0.3%",
+    icon: <Target size={20} className="text-white" />,
+    bgColor: "bg-amber-50",
+    barColor: "bg-amber-600",
+  },
 ];
 
 const PerformanceOverview = () => {
