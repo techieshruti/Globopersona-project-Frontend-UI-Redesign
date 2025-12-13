@@ -1,17 +1,19 @@
 import { Database } from 'lucide-react'
 import React from 'react'
 
-const EmailHeaderCards = ({title, value, icon,
-    subtitle, bgColor}) => {
+const EmailHeaderCards = ({title, value, icon:Icon,
+    subtitle, bgColor, textColor, iconBg, valueColor}) => {
   return (
-    <div className={`${bgColor} w-20 p-4 rounded-2xl flex flex-col gap-2 border-gray-200`}>
-        <div >
-            <h2>{title}</h2>
+    <div className={`${bgColor} ${textColor} p-3 rounded-xl flex flex-col gap-2 border-2 border-gray-200`}>
+        <div>
+            <h2 className='text-sm font-semibold'>{title}</h2>
             <div className='flex justify-between'>
-                <p>{value}</p>
-                <span>{icon}</span>
+                <p className={`text-2xl font-bold ${valueColor}`}>{value}</p>
+                 <div className={`${iconBg} p-2 rounded-xl`}>
+          <Icon size={20} className="text-white" />
+        </div>
             </div> 
-            <p>{subtitle}</p>
+      <p className="text-sm">{subtitle}</p>
         </div>
     </div>
   )
