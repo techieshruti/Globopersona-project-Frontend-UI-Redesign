@@ -1,6 +1,6 @@
 import React from 'react'
 import DashboardMetricCard from './DashboardMetricCard';
-import { Rocket, ArrowUpRight, UsersRound, Eye,Shell, TrendingDown, DollarSign, Target} from "lucide-react";
+import { Rocket, ArrowUpRight, UsersRound, Eye,Shell, TrendingDown, DollarSign, RefreshCcw, Target} from "lucide-react";
 
 const metrics = [
   {
@@ -37,22 +37,50 @@ const metrics = [
     title: "Avg Click Rate",
     value: "4.7%",
     subtitle: "Engagement metric",
-    progress: 78,
+    progress: 65,
     trend: "-0.3%",
     icon: <Target size={20} className="text-white" />,
     bgColor: "bg-amber-50",
     barColor: "bg-amber-600",
   },
+  {
+    title: "Revenue Generated",
+    value: "$24,847",
+    subtitle: "From Campaigns",
+    progress: 88,
+    trend: "+$1,247",
+    icon: <DollarSign size={20} className="text-white" />,
+    bgColor: "bg-green-50",
+    barColor: "bg-green-600",
+  },
+  {
+    title: "Bounce Rate",
+    value: "2.3%",
+    subtitle: "Quality metric",
+    progress: 88,
+    trend: "-0.5%",
+    icon: <TrendingDown size={20} className="text-white" />,
+    bgColor: "bg-red-50",
+    barColor: "bg-red-600",
+  },
 ];
 
 const PerformanceOverview = () => {
   return (
-    <div className='bg-[#f8fafa] px-8 pb-8'>
+    <div className='bg-[#f8fafa] px-8 pt-8'>
 
         {/* Heading */}
+        <div className='flex justify-between'>
         <div>
             <h1 className='text-2xl font-bold'>PerformanceOverview</h1>
             <p className='text-gray-400'>Track you email marketing matrics in real time</p>
+        </div>
+        <div className='flex items-center gap-2 font-semibold text-gray-600'>
+            <select name="" className='px-6 py-2 rounded-xl'>
+                <option value="Last 7 days">Last 7 days</option>
+            </select>
+            <RefreshCcw />
+        </div>
         </div>
 
         {/* Performance Overview Card */}
