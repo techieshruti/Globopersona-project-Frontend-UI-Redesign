@@ -13,16 +13,13 @@ const DashboardMetricCard = ({
 }) => {
   return (
     <div>
-        <div className='${bgColor} p-5 rounded-2xl flex flex-col gap-2 mt-4 border-2 border-gray-100'>
+        <div className={`${bgColor} p-5 rounded-2xl flex flex-col gap-2 mt-4 border-2 border-gray-100`}>
             
             {/* Top row */}
             <div className='flex justify-between items-center'>
-                <div className='w-12 h-12 rounded-xl 
-                    flex items-center justify-center ${barColor}'>
-                <Rocket 
-            size={20}
-            className="text-white w-6 h-6"
-            />
+                <div className={`w-12 h-12 rounded-xl 
+                    flex items-center justify-center ${barColor}`}>
+                {icon}
             </div>
 
             <div className='font-bold text-green-600 flex items-center gap-1'>
@@ -38,19 +35,18 @@ const DashboardMetricCard = ({
             <p className='text-sm text-gray-400 font-semibold'>{subtitle}</p>
 
             {/* Progress Bar */}
-            <div className="w-full">
-      {/* Bar background */}
+            <div className="w-full mt-2">
       <div className="w-full h-2 bg-blue-100 rounded-full overflow-hidden">
         {/* Filled bar */}
         <div
-          className="h-full bg-blue-600 rounded-full transition-all duration-300"
-          style={{ width: `${value}%` }}
+          className={`h-full rounded-full transition-all duration-300 ${barColor}`}
+            style={{ width: `${progress}%` }}
         />
       </div>
 
       {/* Percentage text */}
       <p className="mt-2 text-sm text-gray-400 font-semibold">
-        {value}% of target
+        {progress}% of target
       </p>
     </div>
         </div>
