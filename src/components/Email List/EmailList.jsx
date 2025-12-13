@@ -3,6 +3,7 @@ import EmailHeader from './EmailHeader'
 import Sidebar from '../layout/Sidebar'
 import EmailHeaderCards from './EmailHeaderCards'
 import { Database, Mail, Star, Target, TrendingUp, Users } from 'lucide-react'
+import EmailLayoutCards from './EmailLayoutCards'
 
 const cardData=[
   {
@@ -79,6 +80,7 @@ const EmailList = () => {
           <EmailHeaderCards key={item.title} {...item} />
         ))}
       </div>
+      <EmailLayoutCards/>
      </div>
     </div>
   )
