@@ -13,6 +13,7 @@ const metrics = [
 const DashBoard = () => {
   return (
     <div>
+      <p>vvvvvvvvvvvvvv</p>
       <Sidebar />
       <div className="ml-20">
         <div className="pl-8 flex py-5 justify-between items-center border-b-2 border-gray-200">
