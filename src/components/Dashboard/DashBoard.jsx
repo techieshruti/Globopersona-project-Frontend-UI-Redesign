@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../layout/Sidebar";
 import { Bell, Search, ChevronDown, Dot } from "lucide-react";
+import PerformanceOverview from "./PerformanceOverview";
 
 const metrics = [
   { value: "47", label: "Campaign" },
@@ -13,7 +14,8 @@ const DashBoard = () => {
   return (
     <div>
       <Sidebar />
-      <div className="ml-20 pl-8 flex py-6 justify-between items-center">
+      <div className="ml-20">
+        <div className="pl-8 flex py-6 justify-between items-center">
         {/* Dashboard Content */}
         <div>
           <h1 className="text-3xl font-bold ">Dashboard Overview</h1>
@@ -77,9 +79,14 @@ const DashBoard = () => {
             <ChevronDown className="text-gray-500" />
           </div>
         </div>
+        
+      </div>
+      <PerformanceOverview/>
       </div>
     </div>
+    
   );
+  
 };
 
 export default DashBoard;
