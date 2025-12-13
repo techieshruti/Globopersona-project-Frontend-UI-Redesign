@@ -2,7 +2,7 @@ import { Grid, List, SlidersHorizontal } from "lucide-react";
 
 const CampaignFilterBar = () => {
   return (
-    <div className="mx-6 mt-6 bg-white border rounded-xl shadow-sm p-4 flex justify-between">
+    <div className="mx-6 mt-6 bg-white text-gray-700 border rounded-xl shadow-sm p-4 flex justify-between">
       <div className="flex gap-3 items-center">
         <input
           className="border px-4 py-2 rounded-lg text-sm w-80"
