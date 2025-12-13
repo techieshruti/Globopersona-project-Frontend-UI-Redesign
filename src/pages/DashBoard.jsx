@@ -28,7 +28,13 @@ const DashBoard = () => {
             </div>
 
             {/* admin login */}
-            
+            <div>
+                <h1>R</h1>
+                <div>
+                    <h2>Ravi</h2>
+                <p>Admin</p>
+                </div>
+            </div>
         </div>
     </div>
   )
