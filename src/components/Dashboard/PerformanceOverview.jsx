@@ -72,7 +72,7 @@ const PerformanceOverview = () => {
         {/* Heading */}
         <div className='flex justify-between'>
         <div>
-            <h1 className='text-2xl font-bold'>PerformanceOverview</h1>
+            <h1 className='text-xl font-bold'>PerformanceOverview</h1>
             <p className='text-gray-400'>Track you email marketing matrics in real time</p>
         </div>
         <div className='flex items-center gap-2 font-semibold text-gray-600'>

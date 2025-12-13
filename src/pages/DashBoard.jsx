@@ -18,7 +18,7 @@ const DashBoard = () => {
         <div className="pl-8 flex py-5 justify-between items-center border-b-2 border-gray-200">
         {/* Dashboard Content */}
         <div>
-          <h1 className="text-3xl font-bold ">Dashboard Overview</h1>
+          <h1 className="text-2xl font-bold ">Dashboard Overview</h1>
           <div className="flex">
             <p className="text-gray-400 text-sm flex items-center font-semibold">
               Welcome back, <span className="text-gray-700 pl-1">Ravi!</span>

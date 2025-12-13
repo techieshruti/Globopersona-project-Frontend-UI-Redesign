@@ -31,7 +31,7 @@ const DashboardMetricCard = ({
 
             {/* details */}
             <p className='font-bold text-gray-500'>{title}</p>
-            <h2 className='text-3xl font-bold'>{value}</h2>
+            <h2 className='text-xl font-bold'>{value}</h2>
             <p className='text-sm text-gray-400 font-semibold'>{subtitle}</p>
 
             {/* Progress Bar */}
