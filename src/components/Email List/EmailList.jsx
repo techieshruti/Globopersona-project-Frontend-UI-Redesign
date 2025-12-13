@@ -1,12 +1,12 @@
-import React from 'react'
-import EmailHeader from './EmailHeader'
-import Sidebar from '../layout/Sidebar'
-import EmailHeaderCards from './EmailHeaderCards'
-import { Database, Mail, Star, Target, TrendingUp, Users } from 'lucide-react'
-import EmailLayoutCards from './EmailListCards'
-import EmailListFilters from './EmailListFilters'
+import React from "react";
+import EmailHeader from "./EmailHeader";
+import Sidebar from "../layout/Sidebar";
+import EmailHeaderCards from "./EmailHeaderCards";
+import { Database, Mail, Star, Target, TrendingUp, Users } from "lucide-react";
+import EmailLayoutCards from "./EmailListCards";
+import EmailListFilters from "./EmailListFilters";
 
-const headerCardData=[
+const headerCardData = [
   {
     title: "Total lists",
     value: "7",
@@ -16,8 +16,8 @@ const headerCardData=[
     valueColor: "text-blue-800",
     textColor: "text-blue-500",
     iconBg: "bg-blue-500",
-},
-{
+  },
+  {
     title: "Total Contacts",
     value: "74",
     icon: Users,
@@ -26,8 +26,8 @@ const headerCardData=[
     valueColor: "text-green-800",
     textColor: "text-green-500",
     iconBg: "bg-green-500",
-},
-{
+  },
+  {
     title: "This Month",
     value: "+55",
     icon: TrendingUp,
@@ -36,8 +36,8 @@ const headerCardData=[
     valueColor: "text-purple-800",
     textColor: "text-purple-500",
     iconBg: "bg-purple-500",
-},
-{
+  },
+  {
     title: "Avg. Quality",
     value: "40%",
     icon: Star,
@@ -46,8 +46,8 @@ const headerCardData=[
     valueColor: "text-yellow-800",
     textColor: "text-yellow-500",
     iconBg: "bg-yellow-500",
-},
-{
+  },
+  {
     title: "Open Rate",
     value: "0%",
     icon: Mail,
@@ -56,8 +56,8 @@ const headerCardData=[
     valueColor: "text-pink-800",
     textColor: "text-pink-500",
     iconBg: "bg-pink-500",
-},
-{
+  },
+  {
     title: "Click Rate",
     value: "0%",
     icon: Target,
@@ -66,9 +66,8 @@ const headerCardData=[
     valueColor: "text-teal-800",
     textColor: "text-teal-500",
     iconBg: "bg-teal-500",
-},
-
-]
+  },
+];
 
 const cardData = [
   {
@@ -118,26 +117,26 @@ const cardData = [
 const EmailList = () => {
   return (
     <div>
-      <Sidebar/>
-      <div className='bg-[#f5f7f9] ml-20'>
-        <EmailHeader/>
+      <Sidebar />
+      <div className="bg-[#f5f7f9] ml-20">
+        <EmailHeader />
 
         {/* Email Header Card */}
         <div className="grid grid-cols-6 gap-4 mt-6 px-6">
-        {headerCardData.map((item) => (
-          <EmailHeaderCards key={item.title} {...item} />
-        ))}
+          {headerCardData.map((item) => (
+            <EmailHeaderCards key={item.title} {...item} />
+          ))}
+        </div>
+        <EmailListFilters />
+        {/* Email List UI Card */}
+        <div className="grid grid-cols-3 gap-6 px-6 mt-6">
+          {cardData.map((item, idx) => (
+            <EmailLayoutCards key={idx} {...item} />
+          ))}
+        </div>
       </div>
-<EmailListFilters/>
-      {/* Email List UI Card */}
-      <div className='grid grid-cols-3 gap-6 px-6 mt-6'>
-        {cardData.map((item,idx) => (
-          <EmailLayoutCards key={idx} {...item} />
-        ))}
-      </div>
-     </div>
     </div>
-  )
-}
+  );
+};
 
-export default EmailList
+export default EmailList;
