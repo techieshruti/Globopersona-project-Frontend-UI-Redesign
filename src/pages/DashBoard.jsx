@@ -40,18 +40,20 @@ const DashBoard = () => {
 
             {/* Performance Overview */}
             <div className='flex items-center justify-center gap-6'>
+                {/* Notification */}
                 <Bell /> 
                 <Search />
             </div>
 
             {/* admin login */}
             <div className='flex items-center gap-2 p-2 rounded-lg bg-green-200 mr-4'>
-                <h1 className='px-4 py-2 bg-red-300 rounded-xl'>R</h1>
-                <div>
+                <h1 className='px-4 py-2 bg-[#2563eb] rounded-xl text-white font-semibold'>R</h1>
+                <div className='text-sm'>
                     <h2 className='font-semibold'>Ravi</h2>
                 <p className='text-gray-500'>Admin</p>
                 </div>
-                <ChevronDown />
+                <ChevronDown 
+                className='text-gray-500'/>
             </div>
         </div>
             </div>
