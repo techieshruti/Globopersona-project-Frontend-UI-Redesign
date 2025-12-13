@@ -1,5 +1,5 @@
 import React from 'react'
-import { Rocket, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const DashboardMetricCard = ({
   title,
@@ -13,7 +13,7 @@ const DashboardMetricCard = ({
 }) => {
   return (
     <div>
-        <div className={`${bgColor} p-5 rounded-2xl flex flex-col gap-2 mt-4 border-2 border-gray-100`}>
+        <div className={`${bgColor} p-5 rounded-2xl flex flex-col gap-2 mt-4 border-b-4 border-gray-200`}>
             
             {/* Top row */}
             <div className='flex justify-between items-center'>
