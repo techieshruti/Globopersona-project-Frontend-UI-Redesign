@@ -1,25 +1,47 @@
-import React from 'react'
+import { Grid, List, SlidersHorizontal } from "lucide-react";
+import React from "react";
 
 const EmailLayoutCards = () => {
   return (
-    <div className='ml-5 bg-slate-700 flex gap-2 justify-between'>
-        <div className=''>
-            <input 
-            className='pt-2'
+    <div className="mx-5 mt-8 p-4 bg-white border border-gray-200 rounded-xl shadow-md flex justify-between items-center">
+      
+      {/* Left section */}
+      <div className="flex items-center gap-4">
+        {/* Search */}
+        <div className="flex items-center px-4 py-2 border border-gray-200 rounded-lg bg-white w-[420px]">
+          <input
             type="text"
-            placeholder='Search lists by name, description, or tags...'/>
-        <select name="">
-            <option value="All Status">All Status</option>
+            placeholder="Search lists by name, description, or tags..."
+            className="outline-none text-sm text-gray-600 w-full"
+          />
+        </div>
+
+        {/* Status */}
+        <select className="px-4 py-2 rounded-lg border border-gray-200 text-sm text-gray-600 bg-white">
+          <option>All Status</option>
         </select>
-        <button>icon Filters</button>
-        </div>
 
-        <div className='flex justify-center items-center gap-4'>
-            <button>icon Grid</button>
-            <h1>icon Lists</h1>
-        </div>
+        {/* Filters */}
+        <button className="flex items-center gap-2 px-4 py-2 border border-gray-200 rounded-lg bg-white text-sm text-gray-600">
+          <SlidersHorizontal size={16} />
+          Filters
+        </button>
+      </div>
+
+      {/* Right section */}
+      <div className="flex items-center gap-3">
+        <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-50 text-blue-600 border border-blue-200 text-sm">
+          <Grid size={16} />
+          Grid
+        </button>
+
+        <button className="flex items-center gap-2 text-gray-500 text-sm">
+          <List size={16} />
+          List
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default EmailLayoutCards
+export default EmailLayoutCards;
