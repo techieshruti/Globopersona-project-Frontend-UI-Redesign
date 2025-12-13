@@ -1,4 +1,4 @@
-import Sidebar from "../components/layout/Sidebar.jsx";
+import Sidebar from "../components/Layout/Sidebar.jsx";
 import EmailCampaignHeader from "../components/EmailCampaigns/EmailCampaignHeader";
 import CampaignSummaryCard from "../components/EmailCampaigns/CampaignSummaryCard";
 import CampaignFilterBar from "../components/EmailCampaigns/CampaignFilterBar";

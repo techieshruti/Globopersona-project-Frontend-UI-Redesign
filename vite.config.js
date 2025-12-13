@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Globopersona-project-Frontend-UI-Redesign/',   // ⬅️ VERY IMPORTANT
+  base: '/Globopersona-project-Frontend-UI-Redesign/', 
 })

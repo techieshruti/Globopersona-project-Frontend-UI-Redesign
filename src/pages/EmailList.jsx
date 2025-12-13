@@ -1,6 +1,6 @@
 import React from "react";
 import EmailHeader from "../components/Email List/EmailHeader";
-import Sidebar from "../components/layout/Sidebar.jsx";
+import Sidebar from "../components/Layout/Sidebar.jsx";
 import EmailHeaderCards from "../components/Email List/EmailHeaderCards";
 import { Database, Mail, Star, Target, TrendingUp, Users } from "lucide-react";
 import EmailLayoutCards from "../components/Email List/EmailListCards";
