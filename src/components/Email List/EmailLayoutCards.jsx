@@ -3,7 +3,9 @@ import React from "react";
 
 const EmailLayoutCards = () => {
   return (
-    <div className="mx-5 mt-8 p-4 bg-white border border-gray-200 rounded-xl shadow-md flex justify-between items-center">
+    <div>
+      {/* filter */}
+      <div className="mx-5 mt-8 p-4 bg-white border border-gray-200 rounded-xl shadow-md flex justify-between items-center">
       
       {/* Left section */}
       <div className="flex items-center gap-4">
@@ -40,6 +42,10 @@ const EmailLayoutCards = () => {
           List
         </button>
       </div>
+    </div>
+    {/*  */}
+
+
     </div>
   );
 };
