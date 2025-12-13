@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../components/layout/Sidebar";
+import Sidebar from "../layout/Sidebar";
 import { Bell, Search, ChevronDown, Dot } from "lucide-react";
 
 const metrics = [

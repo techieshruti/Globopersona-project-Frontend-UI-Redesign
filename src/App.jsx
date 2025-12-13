@@ -1,12 +1,13 @@
 import React from 'react'
 import './index.css'
 import Sidebar from './components/layout/Sidebar'
-import DashBoard from './pages/DashBoard'
+import DashBoard from './components/Dashboard/DashBoard'
 
 const App = () => {
   return (
     <>
     <DashBoard/>
+
     </>
   )
 }
