@@ -15,7 +15,7 @@ const DashBoard = () => {
     <div>
       <Sidebar />
       <div className="ml-20">
-        <div className="pl-8 flex py-6 justify-between items-center">
+        <div className="pl-8 flex py-5 justify-between items-center border-b-2 border-gray-200">
         {/* Dashboard Content */}
         <div>
           <h1 className="text-3xl font-bold ">Dashboard Overview</h1>
