@@ -1,7 +1,7 @@
 import Sidebar from "../components/layout/Sidebar";
 import EmailAccountsHeader from "../components/emailAccounts/EmailAccountsHeader";
-import EmailHeaderCards from "../components/EmailHeaderCards.jsx";
-import EmailAccountRow from "../components/emailAccounts/EmailAccountRow";
+import EmailHeaderCards from "../components/Email List/EmailHeaderCards";
+import EmailAccountRow from "../components/emailAccounts/EmailAccountsRow";
 
 import { CheckCircle, Mail, Activity, Settings } from "lucide-react";
 
@@ -81,15 +81,15 @@ const EmailAccounts = () => {
         <EmailAccountsHeader />
 
         {/* Summary Cards */}
-        <div className="grid grid-cols-4 gap-4 px-6 mt-6">
+        <div className="grid grid-cols-4 gap-4 px-6 pl-10 mt-6">
           {summaryCards.map((card) => (
             <EmailHeaderCards key={card.title} {...card} />
           ))}
         </div>
 
         {/* Email Accounts Section */}
-        <div className="px-6 mt-8">
-          <h2 className="text-lg font-semibold text-gray-800">
+        <div className="px-8 pl-10 mt-8">
+          <h2 className="text-xl font-semibold text-gray-800">
             Email Accounts
           </h2>
           <p className="text-sm text-gray-500">
