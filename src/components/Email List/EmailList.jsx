@@ -3,7 +3,8 @@ import EmailHeader from './EmailHeader'
 import Sidebar from '../layout/Sidebar'
 import EmailHeaderCards from './EmailHeaderCards'
 import { Database, Mail, Star, Target, TrendingUp, Users } from 'lucide-react'
-import EmailLayoutCards from './EmailLayoutCards'
+import EmailLayoutCards from './EmailListCards'
+import EmailListFilters from './EmailListFilters'
 
 const headerCardData=[
   {
@@ -69,16 +70,50 @@ const headerCardData=[
 
 ]
 
-const cardData=[
+const cardData = [
   {
     status: "active",
     connection: "poor",
-    title: "Final Test",
-    subtitle: "This is a final test list",
-    buttons: ["1st", "2nd"],
-    validity: "valid",   
+    title: "final test",
+    description: "No description provided",
+    metrics: {
+      validContacts: 5,
+      openRate: "0%",
+    },
+    footer: {
+      value: 5,
+      label: "Valid",
+    },
   },
-]
+  {
+    status: "active",
+    connection: "poor",
+    title: "Madhu",
+    description: "No description provided",
+    metrics: {
+      validContacts: 24,
+      openRate: "0%",
+    },
+    footer: {
+      value: 24,
+      label: "Valid",
+    },
+  },
+  {
+    status: "active",
+    connection: "poor",
+    title: "Test Vercel",
+    description: "No description provided",
+    metrics: {
+      validContacts: 24,
+      openRate: "0%",
+    },
+    footer: {
+      value: 24,
+      label: "Valid",
+    },
+  },
+];
 
 const EmailList = () => {
   return (
@@ -93,11 +128,11 @@ const EmailList = () => {
           <EmailHeaderCards key={item.title} {...item} />
         ))}
       </div>
-
+<EmailListFilters/>
       {/* Email List UI Card */}
-      <div className='grid grid-col-3 gap-4'>
-        {cardData.map((item) => (
-          <EmailLayoutCards key={item.title} {...item} />
+      <div className='grid grid-cols-3 gap-6 px-6 mt-6'>
+        {cardData.map((item,idx) => (
+          <EmailLayoutCards key={idx} {...item} />
         ))}
       </div>
      </div>
