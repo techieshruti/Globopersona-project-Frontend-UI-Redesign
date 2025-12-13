@@ -4,7 +4,7 @@ import EmailList from "./pages/EmailList";
 import EmailAccounts from "./pages/EmailAccounts";
 import EmailCampaigns from "./pages/EmailCampaigns";
 
-const App = () => {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/dashboard" />} />
@@ -14,6 +14,6 @@ const App = () => {
       <Route path="/campaigns" element={<EmailCampaigns />} />
     </Routes>
   );
-};
+}
 
 export default App;

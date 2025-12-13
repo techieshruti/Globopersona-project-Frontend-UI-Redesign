@@ -4,8 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <BrowserRouter basename="/Globopersona-project-Frontend-UI-Redesign">
     <App />
   </BrowserRouter>
 );
