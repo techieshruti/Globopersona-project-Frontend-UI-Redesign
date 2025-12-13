@@ -39,10 +39,14 @@ const DashBoard = () => {
             </div>
 
             {/* Performance Overview */}
-            <div className='flex items-center justify-center gap-6'>
+            <div className='flex items-center justify-center gap-6 relative'>
                 {/* Notification */}
                 <Bell /> 
-                <Search />
+                <span 
+                className='absolute w-5 h-5 bg-red-600 -top-5 -right-4 rounded-full text-white flex items-center justify-center text-xs font-semibold'>
+                    3
+                    </span>
+                {/* <Search /> */}
             </div>
 
             {/* admin login */}
