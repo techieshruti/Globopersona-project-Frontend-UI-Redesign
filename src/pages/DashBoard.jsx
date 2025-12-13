@@ -34,7 +34,7 @@ const DashBoard = () => {
   {metrics.map((item, index) => (
     <div
       key={item.label}
-      className={`flex flex-col pr-4 ${
+      className={`flex flex-col pr-4 items-center ${
         index !== metrics.length - 1 ? "border-r-2 border-gray-200" : ""
       }`}
     >
