@@ -1,18 +1,23 @@
 import React from 'react'
 import Sidebar from '../components/layout/Sidebar'
-import { Bell, Search, ChevronDown } from 'lucide-react';
+import { Bell, Search, ChevronDown, Dot } from 'lucide-react';
 
 const DashBoard = () => {
   return (
     <div>
         <Sidebar/>
-        <div className='ml-20 flex justify-between items-center'>
+        <div className='ml-20 pl-8 h-20 bg-amber-200 flex justify-between items-center'>
             {/* Dashboard Content */}
-            <div className='bg-gray-400'>
-                <h1 className='text-3xl font-bold p-2'>Dashboard Overview</h1>
-            <p>Welcome back, ravi!
-                <span>All System Operationals</span>
+            <div className=''>
+                <h1 className='text-3xl bg-red-500 font-bold '>Dashboard Overview</h1>
+            <div className='flex flex-auto'>
+                <p className='text-gray-600 text-sm flex items-center font-semibold'>Welcome back, Ravi!
+                <Dot size={50}
+                className='text-green-600'
+                />
+                    <span className=' text-green-600'>All System Operationals</span>
             </p>
+            </div>
             </div>
 
             {/* Top Right Icons */}
