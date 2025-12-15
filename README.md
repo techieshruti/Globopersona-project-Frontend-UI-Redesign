@@ -6,7 +6,8 @@ This project focuses on UI structure, reusable components, routing, and layout c
 
 ## 🔗 Live Demo
 
-👉 Deployed on GitHub Pages :- 
+👉 Deployed on GitHub Pages
+* Live link :- https://techieshruti.github.io/Globopersona-project-Frontend-UI-Redesign/#/dashboard
 
 ## 📌 Features
 * 📊 Dashboard Overview with performance metrics
@@ -27,20 +28,60 @@ This project focuses on UI structure, reusable components, routing, and layout c
 
 ## 📂 Project Structure
 ```
+src
+│
+├── assets
+│
+├── components
+│   │
+│   ├── Dashboard
+│   │   ├── DashboardMetricCard.jsx
+│   │   └── PerformanceOverview.jsx
+│   │
+│   ├── Email List
+│   │   ├── EmailHeader.jsx
+│   │   ├── EmailHeaderCards.jsx
+│   │   ├── EmailListCards.jsx
+│   │   └── EmailListFilters.jsx
+│   │
+│   ├── emailAccounts
+│   │   ├── EmailAccountsHeader.jsx
+│   │   └── EmailAccountsRow.jsx
+│   │
+│   ├── EmailCampaigns
+│   │   ├── CampaignCard.jsx
+│   │   ├── CampaignFilterBar.jsx
+│   │   ├── CampaignSummaryCard.jsx
+│   │   └── EmailCampaignHeader.jsx
+│   │
+│   ├── Layout
+│   │   ├── MainLayout.jsx
+│   │   └── Sidebar.jsx
+│   │
+│   └── UI
+│
+├── pages
+│   ├── DashBoard.jsx
+│   ├── EmailAccounts.jsx
+│   ├── EmailCampaigns.jsx
+│   └── EmailList.jsx
+│
+├── App.jsx
+├── main.jsx
+├── index.css
+
 ```
+
 ## 🖥 Pages Included
 - Dashboard
 - Email Lists
 - Email Accounts
 - Email Campaigns
 
-## 🌐 Deployment Notes
-* The project is configured for GitHub Pages using basename in BrowserRouter.
-* Ensure the repo name matches the deployment path.
-* Vite build output is generated using:
-```
-npm run build
-```
+## 📌 Notes
+* This project focuses on UI/UX and frontend architecture
+* APIs and backend logic are intentionally not included
+* Designed to demonstrate real-world dashboard UI patterns
 
 ## 🧠 Key Learnings
 * Structuring a scalable React project
